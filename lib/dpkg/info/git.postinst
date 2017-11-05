@@ -1,0 +1,31 @@
+#!/bin/sh
+set -e
+
+# Automatically added by dh_installdeb
+dpkg-maintscript-helper rm_conffile /etc/bash_completion.d/git 1:1.8.0-1~ -- "$@"
+# End automatically added section
+# Automatically added by dh_installdeb
+dpkg-maintscript-helper rm_conffile /etc/emacs/site-start.d/50git-core.el 1:1.7.4.1-2~ -- "$@"
+# End automatically added section
+
+
+test "$1" = configure || exit 0
+
+removed_conffile=/etc/emacs/site-start.d/50git-core.el
+
+# Carry over modifications so git-el can use them.
+if dpkg --compare-versions "$2" lt '1:1.7.4.1-2~' &&
+   ! test -e "$removed_conffile" &&
+   test -r "$removed_conffile".dpkg-bak; then
+  mv "$removed_conffile".dpkg-bak "$removed_conffile"
+fi
+
+# 1.7.7-1 replaces /usr/share/doc/git/contrib/hooks with a symlink,
+# but dpkg doesn't do so on package upgrade
+if test -n "$2" && dpkg --compare-versions "$2" lt '1:1.7.7-1' &&
+   test ! -L /usr/share/doc/git/contrib/hooks &&
+   test -d /usr/share/doc/git/contrib/hooks; then
+  rmdir /usr/share/doc/git/contrib/hooks &&
+  ln -s ../../../git-core/contrib/hooks \
+    /usr/share/doc/git/contrib/hooks
+fi
