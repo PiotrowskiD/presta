@@ -1,21 +1,25 @@
-<?php /*%%SmartyHeaderCode:36531842159fee819728ab4-69747791%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:7456438075a08b423d35958-57100420%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '3aa0d62e1049e5b9d12bc2cae084fdddf0d39b7a' => 
     array (
       0 => '/var/www/html/themes/default-bootstrap/modules/homefeatured/homefeatured.tpl',
-      1 => 1509215145,
+      1 => 1510508613,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '36531842159fee819728ab4-69747791',
-  'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_59fee83fbf43f1_42601293',
+  'nocache_hash' => '7456438075a08b423d35958-57100420',
+  'variables' => 
+  array (
+    'products' => 0,
+  ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.19',
+  'unifunc' => 'content_5a08b423d40149_97057771',
   'cache_lifetime' => 31536000,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59fee83fbf43f1_42601293')) {function content_59fee83fbf43f1_42601293($_smarty_tpl) {?><ul id="homefeatured" class="homefeatured tab-pane">
+<?php if ($_valid && !is_callable('content_5a08b423d40149_97057771')) {function content_5a08b423d40149_97057771($_smarty_tpl) {?><ul id="homefeatured" class="homefeatured tab-pane">
 	<li class="alert alert-info">Brak polecanych produktów w tym momencie.</li>
 </ul>
 <?php }} ?>

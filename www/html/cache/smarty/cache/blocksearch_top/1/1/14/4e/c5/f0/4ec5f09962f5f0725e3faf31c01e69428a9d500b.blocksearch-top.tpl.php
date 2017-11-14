@@ -1,26 +1,21 @@
-<?php /*%%SmartyHeaderCode:44634660359fee81921b6b1-25930648%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:9983255355a08b423928906-23266736%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '4ec5f09962f5f0725e3faf31c01e69428a9d500b' => 
     array (
       0 => '/var/www/html/themes/default-bootstrap/modules/blocksearch/blocksearch-top.tpl',
-      1 => 1509215145,
+      1 => 1510508613,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '44634660359fee81921b6b1-25930648',
-  'variables' => 
-  array (
-    'link' => 0,
-    'search_query' => 0,
-  ),
-  'has_nocache_code' => false,
+  'nocache_hash' => '9983255355a08b423928906-23266736',
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_59fee819232054_05947955',
+  'unifunc' => 'content_5a08b42e58d5b0_66296651',
+  'has_nocache_code' => false,
   'cache_lifetime' => 31536000,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59fee819232054_05947955')) {function content_59fee819232054_05947955($_smarty_tpl) {?><!-- Block search module TOP -->
+<?php if ($_valid && !is_callable('content_5a08b42e58d5b0_66296651')) {function content_5a08b42e58d5b0_66296651($_smarty_tpl) {?><!-- Block search module TOP -->
 <div id="search_block_top" class="col-sm-4 clearfix">
 	<form id="searchbox" method="get" action="//localhost:8080/szukaj" >
 		<input type="hidden" name="controller" value="search" />
