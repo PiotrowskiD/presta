@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2017-11-05 11:30:10
+<?php /* Smarty version Smarty-3.1.19, created on 2017-11-17 14:54:31
          compiled from "/var/www/html/admin1/themes/default/template/controllers/products/helpers/list/list_header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:150639313359fee832104299-90578932%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:15117606275a0eea17f22184-43599582%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'cdd17e6282c6432ca2b16c4189638df5c5078d81' => 
     array (
       0 => '/var/www/html/admin1/themes/default/template/controllers/products/helpers/list/list_header.tpl',
-      1 => 1509215144,
+      1 => 1510508613,
       2 => 'file',
     ),
     '70dfd18b0b5ae543219b8ead04c0cbd97fd6293a' => 
     array (
       0 => '/var/www/html/admin1/themes/default/template/helpers/list/list_header.tpl',
-      1 => 1509215144,
+      1 => 1510508613,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '150639313359fee832104299-90578932',
+  'nocache_hash' => '15117606275a0eea17f22184-43599582',
   'function' => 
   array (
   ),
@@ -69,9 +69,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_59fee8323e80e7_59255253',
+  'unifunc' => 'content_5a0eea18252fa4_89119585',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59fee8323e80e7_59255253')) {function content_59fee8323e80e7_59255253($_smarty_tpl) {?><?php if (!is_callable('smarty_function_math')) include '/var/www/html/tools/smarty/plugins/function.math.php';
+<?php if ($_valid && !is_callable('content_5a0eea18252fa4_89119585')) {function content_5a0eea18252fa4_89119585($_smarty_tpl) {?><?php if (!is_callable('smarty_function_math')) include '/var/www/html/tools/smarty/plugins/function.math.php';
 ?>
 <?php if ($_smarty_tpl->tpl_vars['ajax']->value) {?>
 	<script type="text/javascript">
