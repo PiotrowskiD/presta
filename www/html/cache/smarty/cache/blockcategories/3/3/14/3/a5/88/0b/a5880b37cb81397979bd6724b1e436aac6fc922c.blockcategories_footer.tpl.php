@@ -16,19 +16,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     ),
   ),
   'nocache_hash' => '13768157885a0ee8a210a216-02441017',
-  'variables' => 
-  array (
-    'isDhtml' => 0,
-    'blockCategTree' => 0,
-    'child' => 0,
-    'numberColumn' => 0,
-  ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_5a0ee8a21ac482_81912754',
+  'unifunc' => 'content_5a0ef7323dc9a9_47475842',
+  'has_nocache_code' => false,
   'cache_lifetime' => 31536000,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a0ee8a21ac482_81912754')) {function content_5a0ee8a21ac482_81912754($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_5a0ef7323dc9a9_47475842')) {function content_5a0ef7323dc9a9_47475842($_smarty_tpl) {?>
 <!-- Block categories module -->
 <section class="blockcategories_footer footer-block col-xs-12 col-sm-2">
 	<h4>Kategorie</h4>
@@ -125,7 +118,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <li >
 	<a 
 	href="http://localhost:8080/13-mezczyzni" title="">
-		mezczyzni
+		mężczyźni
 	</a>
 	</li>
 
