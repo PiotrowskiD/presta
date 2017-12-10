@@ -17,11 +17,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'nocache_hash' => '15751053765a0ee95831b899-00814053',
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_5a0efa1b3e9158_91578618',
+  'unifunc' => 'content_5a2da2c2aca5c8_58068294',
   'has_nocache_code' => false,
   'cache_lifetime' => 31536000,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a0efa1b3e9158_91578618')) {function content_5a0efa1b3e9158_91578618($_smarty_tpl) {?>		
+<?php if ($_valid && !is_callable('content_5a2da2c2aca5c8_58068294')) {function content_5a2da2c2aca5c8_58068294($_smarty_tpl) {?>		
 									
 		
 	
@@ -30,7 +30,72 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			
 		
 		
-								<li class="ajax_block_product col-xs-12 col-sm-4 col-md-3 first-in-line last-line first-item-of-tablet-line first-item-of-mobile-line">
+								<li class="ajax_block_product col-xs-12 col-sm-4 col-md-3 first-in-line first-item-of-tablet-line first-item-of-mobile-line">
+			<div class="product-container" itemscope itemtype="https://schema.org/Product">
+				<div class="left-block">
+					<div class="product-image-container">
+						<a class="product_img_link" href="http://localhost:8080/katalog/90-torebka-black.html" title="Torebka - black" itemprop="url">
+							<img class="replace-2x img-responsive" src="http://localhost:8080/546-home_default/torebka-black.jpg" alt="Torebka - black" title="Torebka - black"  width="250" height="250" itemprop="image" />
+						</a>
+													<div class="quick-view-wrapper-mobile">
+							<a class="quick-view-mobile" href="http://localhost:8080/katalog/90-torebka-black.html" rel="http://localhost:8080/katalog/90-torebka-black.html">
+								<i class="icon-eye-open"></i>
+							</a>
+						</div>
+						<a class="quick-view" href="http://localhost:8080/katalog/90-torebka-black.html" rel="http://localhost:8080/katalog/90-torebka-black.html">
+							<span>Szybki podgląd</span>
+						</a>
+																			<div class="content_price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+																	<span itemprop="price" class="price product-price">
+										
+										96,85 z??									</span>
+									<meta itemprop="priceCurrency" content="PLN" />
+																												<span class="unvisible">
+																								<link itemprop="availability" href="https://schema.org/InStock" />W magazynie																					</span>
+																		
+									
+															</div>
+																							</div>
+										
+				</div>
+				<div class="right-block">
+					<h5 itemprop="name">
+												<a class="product-name" href="http://localhost:8080/katalog/90-torebka-black.html" title="Torebka - black" itemprop="url" >
+							Torebka - black
+						</a>
+					</h5>
+															<p class="product-desc" itemprop="description">
+						Materia??: Sk??ropodobny materia??; Podszewka: Poliester; Struktura/rodzaj materia??u: Sk??ra ekologiczna;
+					</p>
+										<div class="content_price">
+													
+							<span class="price product-price">
+								96,85 z??							</span>
+														
+							
+							
+											</div>
+										<div class="button-container">
+																													<a class="button ajax_add_to_cart_button btn btn-default" href="http://localhost:8080/koszyk?add=1&amp;id_product=90&amp;token=8c0c71d9ce45654fc3431c3165ea0ac7" rel="nofollow" title="Dodaj do koszyka" data-id-product-attribute="0" data-id-product="90" data-minimal_quantity="0">
+									<span>Dodaj do koszyka</span>
+								</a>
+																			<a class="button lnk_view btn btn-default" href="http://localhost:8080/katalog/90-torebka-black.html" title="Zobacz">
+							<span>Więcej</span>
+						</a>
+					</div>
+										<div class="product-flags">
+																														</div>
+																		<span class="availability">
+																	<span class=" label-success">
+										W magazynie									</span>
+															</span>
+															</div>
+							</div><!-- .product-container> -->
+		</li>
+			
+		
+		
+								<li class="ajax_block_product col-xs-12 col-sm-4 col-md-3 last-item-of-mobile-line">
 			<div class="product-container" itemscope itemtype="https://schema.org/Product">
 				<div class="left-block">
 					<div class="product-image-container">
@@ -48,17 +113,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 																			<div class="content_price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
 																	<span itemprop="price" class="price product-price">
 										
-										251,40 zł									</span>
+										251,40 z??									</span>
 									<meta itemprop="priceCurrency" content="PLN" />
 																												<span class="unvisible">
 																								<link itemprop="availability" href="https://schema.org/InStock" />W magazynie																					</span>
 																		
 									
 															</div>
-																			<a class="new-box" href="http://localhost:8080/katalog/1-slim-fit-koszulka-polo-fall-royal.html">
-								<span class="new-label">Nowy</span>
-							</a>
-																	</div>
+																							</div>
 										
 				</div>
 				<div class="right-block">
@@ -68,12 +130,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						</a>
 					</h5>
 															<p class="product-desc" itemprop="description">
-						Materiał: 97% bawełna, 3% elastan; Zawiera elementy skórzane: Tak; Wskazówki pielęgnacyjne: Pranie w pralce w 30°C;
+						Materia??: 97% bawe??na, 3% elastan; Zawiera elementy sk??rzane: Tak; Wskaz??wki piel??gnacyjne: Pranie w pralce w 30??C;
 					</p>
 										<div class="content_price">
 													
 							<span class="price product-price">
-								251,40 zł							</span>
+								251,40 z??							</span>
 														
 							
 							
@@ -98,7 +160,72 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			
 		
 		
-								<li class="ajax_block_product col-xs-12 col-sm-4 col-md-3 last-line last-item-of-mobile-line">
+								<li class="ajax_block_product col-xs-12 col-sm-4 col-md-3 last-item-of-tablet-line first-item-of-mobile-line">
+			<div class="product-container" itemscope itemtype="https://schema.org/Product">
+				<div class="left-block">
+					<div class="product-image-container">
+						<a class="product_img_link" href="http://localhost:8080/katalog/61-3-pack-regular-fit-t-shirt-basic-black.html" title="3 PACK REGULAR FIT - T-shirt basic - black" itemprop="url">
+							<img class="replace-2x img-responsive" src="http://localhost:8080/361-home_default/3-pack-regular-fit-t-shirt-basic-black.jpg" alt="3 PACK REGULAR FIT - T-shirt basic - black" title="3 PACK REGULAR FIT - T-shirt basic - black"  width="250" height="250" itemprop="image" />
+						</a>
+													<div class="quick-view-wrapper-mobile">
+							<a class="quick-view-mobile" href="http://localhost:8080/katalog/61-3-pack-regular-fit-t-shirt-basic-black.html" rel="http://localhost:8080/katalog/61-3-pack-regular-fit-t-shirt-basic-black.html">
+								<i class="icon-eye-open"></i>
+							</a>
+						</div>
+						<a class="quick-view" href="http://localhost:8080/katalog/61-3-pack-regular-fit-t-shirt-basic-black.html" rel="http://localhost:8080/katalog/61-3-pack-regular-fit-t-shirt-basic-black.html">
+							<span>Szybki podgląd</span>
+						</a>
+																			<div class="content_price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+																	<span itemprop="price" class="price product-price">
+										
+										63,20 z??									</span>
+									<meta itemprop="priceCurrency" content="PLN" />
+																												<span class="unvisible">
+																								<link itemprop="availability" href="https://schema.org/InStock" />W magazynie																					</span>
+																		
+									
+															</div>
+																							</div>
+										
+				</div>
+				<div class="right-block">
+					<h5 itemprop="name">
+												<a class="product-name" href="http://localhost:8080/katalog/61-3-pack-regular-fit-t-shirt-basic-black.html" title="3 PACK REGULAR FIT - T-shirt basic - black" itemprop="url" >
+							3 PACK REGULAR FIT - T-shirt basic - black
+						</a>
+					</h5>
+															<p class="product-desc" itemprop="description">
+						Materia??: 100% bawe??na; Struktura/rodzaj materia??u: D??ersej; Wskaz??wki piel??gnacyjne: Pranie w pralce w 40??C, nie suszy?? w suszarce b??bnowej, pranie delikatne;
+					</p>
+										<div class="content_price">
+													
+							<span class="price product-price">
+								63,20 z??							</span>
+														
+							
+							
+											</div>
+										<div class="button-container">
+																													<a class="button ajax_add_to_cart_button btn btn-default" href="http://localhost:8080/koszyk?add=1&amp;id_product=61&amp;token=8c0c71d9ce45654fc3431c3165ea0ac7" rel="nofollow" title="Dodaj do koszyka" data-id-product-attribute="0" data-id-product="61" data-minimal_quantity="0">
+									<span>Dodaj do koszyka</span>
+								</a>
+																			<a class="button lnk_view btn btn-default" href="http://localhost:8080/katalog/61-3-pack-regular-fit-t-shirt-basic-black.html" title="Zobacz">
+							<span>Więcej</span>
+						</a>
+					</div>
+										<div class="product-flags">
+																														</div>
+																		<span class="availability">
+																	<span class=" label-success">
+										W magazynie									</span>
+															</span>
+															</div>
+							</div><!-- .product-container> -->
+		</li>
+			
+		
+		
+								<li class="ajax_block_product col-xs-12 col-sm-4 col-md-3 last-in-line first-item-of-tablet-line last-item-of-mobile-line">
 			<div class="product-container" itemscope itemtype="https://schema.org/Product">
 				<div class="left-block">
 					<div class="product-image-container">
@@ -116,7 +243,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 																			<div class="content_price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
 																	<span itemprop="price" class="price product-price">
 										
-										84,60 zł									</span>
+										84,60 z??									</span>
 									<meta itemprop="priceCurrency" content="PLN" />
 																												<span class="unvisible">
 																								<link itemprop="availability" href="https://schema.org/OutOfStock" />Oczekiwanie na dostawę
@@ -124,10 +251,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 																		
 									
 															</div>
-																			<a class="new-box" href="http://localhost:8080/glowna/3-torebka-navy.html">
-								<span class="new-label">Nowy</span>
-							</a>
-																	</div>
+																							</div>
 										
 				</div>
 				<div class="right-block">
@@ -137,12 +261,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						</a>
 					</h5>
 															<p class="product-desc" itemprop="description">
-						Materiał: Materiał; Podszewka: Materiał;
+						Materia??: Materia??; Podszewka: Materia??;
 					</p>
 										<div class="content_price">
 													
 							<span class="price product-price">
-								84,60 zł							</span>
+								84,60 z??							</span>
 														
 							
 							
@@ -168,12 +292,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			
 		
 		
-								<li class="ajax_block_product col-xs-12 col-sm-4 col-md-3 last-line last-item-of-tablet-line first-item-of-mobile-line last-mobile-line">
+								<li class="ajax_block_product col-xs-12 col-sm-4 col-md-3 first-in-line last-line first-item-of-mobile-line last-mobile-line">
 			<div class="product-container" itemscope itemtype="https://schema.org/Product">
 				<div class="left-block">
 					<div class="product-image-container">
-						<a class="product_img_link" href="http://localhost:8080/katalog/2-plaszcz-welniany-plaszcz-klasyczny-dark-blue.html" title="Płaszcz wełniany /Płaszcz klasyczny - dark blue" itemprop="url">
-							<img class="replace-2x img-responsive" src="http://localhost:8080/6-home_default/plaszcz-welniany-plaszcz-klasyczny-dark-blue.jpg" alt="Płaszcz wełniany /Płaszcz klasyczny - dark blue" title="Płaszcz wełniany /Płaszcz klasyczny - dark blue"  width="250" height="250" itemprop="image" />
+						<a class="product_img_link" href="http://localhost:8080/katalog/2-plaszcz-welniany-plaszcz-klasyczny-dark-blue.html" title="P??aszcz we??niany /P??aszcz klasyczny - dark blue" itemprop="url">
+							<img class="replace-2x img-responsive" src="http://localhost:8080/6-home_default/plaszcz-welniany-plaszcz-klasyczny-dark-blue.jpg" alt="P??aszcz we??niany /P??aszcz klasyczny - dark blue" title="P??aszcz we??niany /P??aszcz klasyczny - dark blue"  width="250" height="250" itemprop="image" />
 						</a>
 													<div class="quick-view-wrapper-mobile">
 							<a class="quick-view-mobile" href="http://localhost:8080/katalog/2-plaszcz-welniany-plaszcz-klasyczny-dark-blue.html" rel="http://localhost:8080/katalog/2-plaszcz-welniany-plaszcz-klasyczny-dark-blue.html">
@@ -186,32 +310,29 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 																			<div class="content_price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
 																	<span itemprop="price" class="price product-price">
 										
-										309,22 zł									</span>
+										309,22 z??									</span>
 									<meta itemprop="priceCurrency" content="PLN" />
 																												<span class="unvisible">
 																								<link itemprop="availability" href="https://schema.org/InStock" />W magazynie																					</span>
 																		
 									
 															</div>
-																			<a class="new-box" href="http://localhost:8080/katalog/2-plaszcz-welniany-plaszcz-klasyczny-dark-blue.html">
-								<span class="new-label">Nowy</span>
-							</a>
-																	</div>
+																							</div>
 										
 				</div>
 				<div class="right-block">
 					<h5 itemprop="name">
-												<a class="product-name" href="http://localhost:8080/katalog/2-plaszcz-welniany-plaszcz-klasyczny-dark-blue.html" title="Płaszcz wełniany /Płaszcz klasyczny - dark blue" itemprop="url" >
-							Płaszcz wełniany /Płaszcz klasyczny - dark...
+												<a class="product-name" href="http://localhost:8080/katalog/2-plaszcz-welniany-plaszcz-klasyczny-dark-blue.html" title="P??aszcz we??niany /P??aszcz klasyczny - dark blue" itemprop="url" >
+							P??aszcz we??niany /P??aszcz klasyczny -...
 						</a>
 					</h5>
 															<p class="product-desc" itemprop="description">
-						Materiał: 83% poliester, 17% wełna; Materiał wewnętrzny: 100% poliester; Podszewka: 100% poliester; Wskazówki pielęgnacyjne: Nie suszyć w suszarce bębnowej, czyszczenie chemiczne, Nie prać;
+						Materia??: 83% poliester, 17% we??na; Materia?? wewn??trzny: 100% poliester; Podszewka: 100% poliester; Wskaz??wki piel??gnacyjne: Nie suszy?? w suszarce b??bnowej, czyszczenie chemiczne, Nie pra??;
 					</p>
 										<div class="content_price">
 													
 							<span class="price product-price">
-								309,22 zł							</span>
+								309,22 z??							</span>
 														
 							
 							
