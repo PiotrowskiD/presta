@@ -11,16 +11,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'nocache_hash' => '15108660845a0ee8a1b7de05-05443866',
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_5a0efa14b94da1_55775921',
+  'unifunc' => 'content_5a30488e8abe05_59366378',
   'has_nocache_code' => false,
   'cache_lifetime' => 31536000,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a0efa14b94da1_55775921')) {function content_5a0efa14b94da1_55775921($_smarty_tpl) {?>	<!-- Menu -->
-	<div id="block_top_menu" class="sf-contener clearfix col-lg-12">
-		<div class="cat-title">Zakładki</div>
-		<ul class="sf-menu clearfix menu-content">
-			<li><a href="http://localhost:8080/33-kobiety" title="kobiety">kobiety</a></li><li><a href="http://localhost:8080/121-mezczyzni" title="mezczyzni">mezczyzni</a></li><li><a href="http://localhost:8080/137-obuwie" title="obuwie">obuwie</a></li><li><a href="http://localhost:8080/188-akcesoria" title="akcesoria">akcesoria</a></li><li><a href="http://localhost:8080/289-torebki" title="torebki">torebki</a></li><li><a href="http://localhost:8080/138-sport" title="sport">sport</a></li>
-					</ul>
-	</div>
-	<!--/ Menu -->
-<?php }} ?>
+<?php if ($_valid && !is_callable('content_5a30488e8abe05_59366378')) {function content_5a30488e8abe05_59366378($_smarty_tpl) {?><?php }} ?>
