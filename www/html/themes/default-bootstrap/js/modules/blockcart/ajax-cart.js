@@ -130,6 +130,9 @@ var ajaxCart = {
 		//for every 'add' buttons...
 		$(document).off('click', '.ajax_add_to_cart_button').on('click', '.ajax_add_to_cart_button', function(e){
 			e.preventDefault();
+
+					console.log("***************************************Add to card");
+
 			var idProduct =  parseInt($(this).data('id-product'));
 			var idProductAttribute =  parseInt($(this).data('id-product-attribute'));
 			var minimalQuantity =  parseInt($(this).data('minimal_quantity'));
