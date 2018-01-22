@@ -1188,6 +1188,13 @@ function checkUrl()
 }
 
 console.log('bez warunku');
+$.ajax({
+	type: "GET",
+	url: "http://172.17.0.3:8081/rest/api/ping"
+}).done(function(response) {
+	console.log(response);
+});
+console.log('---------------bez warunku');
 
 if(typeof userID !== 'undefined' && typeof productID !== 'undefined') {
 	console.log('tu będzie post');
