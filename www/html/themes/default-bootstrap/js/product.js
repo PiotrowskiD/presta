@@ -1060,6 +1060,7 @@ function checkMinimalQuantity(minimal_quantity)
 
 function colorPickerClick(elt)
 {
+	console.log('color');
 	id_attribute = $(elt).attr('id').replace('color_', '');
 	$(elt).parent().parent().children().removeClass('selected');
 	$(elt).fadeTo('fast', 1, function(){
@@ -1177,5 +1178,4 @@ function checkUrl()
 
 if(typeof userID !== 'undefined' && typeof productID !== 'undefined') {
 	console.log('tu będzie post');
-
 }
