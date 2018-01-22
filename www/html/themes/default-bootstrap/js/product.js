@@ -116,7 +116,6 @@ if (typeof combinations !== 'undefined' && combinations)
 /* */
 $(document).ready(function()
 {
-	console.log(' ID:  ' + productID);
 	console.log('document ready')
 	$.ajax({
 		type: "GET",
@@ -124,7 +123,7 @@ $(document).ready(function()
 	}).done(function(response) {
 		console.log(response);
 	});
-
+	//console.log(userID + ', ' + productID);
 	console.log('--------document ready ')
 
 

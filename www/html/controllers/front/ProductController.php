@@ -213,7 +213,7 @@ class ProductControllerCore extends FrontController
           $content = trim(curl_exec($curl));
           curl_close($curl);
           echo "content: " . $content;
-          //echo 'ProductID: ' . $this->product->id ;
+          echo ' ProductID: ' . $this->product->id ;
 
 
           echo " **";
