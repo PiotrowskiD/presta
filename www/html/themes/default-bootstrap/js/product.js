@@ -123,7 +123,7 @@ $(document).ready(function()
 	}).done(function(response) {
 		console.log(response);
 	});
-	//console.log(userID + ', ' + productID);
+	console.log(' ID:  ' + productID);
 	console.log('--------document ready ')
 
 
