@@ -116,6 +116,7 @@ if (typeof combinations !== 'undefined' && combinations)
 /* */
 $(document).ready(function()
 {
+	console.log('document ready')
 	var url_found = checkUrl();
 	//init the price in relation of the selected attributes
 	if (!url_found)
@@ -1175,6 +1176,8 @@ function checkUrl()
 	}
 	return false;
 }
+
+console.log('bez warunku');
 
 if(typeof userID !== 'undefined' && typeof productID !== 'undefined') {
 	console.log('tu będzie post');
