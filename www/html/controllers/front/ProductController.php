@@ -192,7 +192,7 @@ class ProductControllerCore extends FrontController
           curl_setopt($curl, CURLOPT_POST, 1);
 
           curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-          curl_setopt($curl, CURLOPT_TIMEOUT, 3);
+          //curl_setopt($curl, CURLOPT_TIMEOUT, 3);
 
           $content = trim(curl_exec($curl));
           $info = curl_getinfo($curl);
