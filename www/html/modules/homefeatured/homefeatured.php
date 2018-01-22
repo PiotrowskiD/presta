@@ -140,6 +140,19 @@ class HomeFeatured extends Module
 		if (!$this->isCached('tab.tpl', $this->getCacheId('homefeatured-tab')))
 			$this->_cacheProducts();
 
+
+		$ids=["1", "2", "3"];
+		$recommendedProducts = Db::getInstance()->executeS('SELECT * FROM '._DB_PREFIX_.'product WHERE id_product IN ('.$ids.')');
+		$this->smarty->assign(
+  				array(
+  					'products' => HomeFeatured::$cache_products,
+  					'products' => $recommendedProducts,
+  					'add_prod_display' => Configuration::get('PS_ATTRIBUTE_CATEGORY_DISPLAY'),
+  					'homeSize' => Image::getSize(ImageType::getFormatedName('home')),
+  				)
+  			);
+
+
 		return $this->display(__FILE__, 'tab.tpl', $this->getCacheId('homefeatured-tab'));
 	}
 
