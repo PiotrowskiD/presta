@@ -1190,8 +1190,8 @@ function checkUrl()
 console.log('bez warunku');
 
 var xmlHttp = new XMLHttpRequest();
-	 xmlHttp.open( "GET", "http://172.17.0.3:8081/rest/api/ping", false ); // false for synchronous request
-	 xmlHttp.send( null );
+	 xmlHttp.open( "GET", "http://172.17.0.3:8081/rest/api/ping", true ); // false for synchronous request
+	 xmlHttp.send();
 	 console.log( xmlHttp.responseText );
 
 $.ajax({
