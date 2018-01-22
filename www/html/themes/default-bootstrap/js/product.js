@@ -683,7 +683,7 @@ function updatePrice()
 	// 0 by default, +x if price is inscreased, -x if price is decreased
 	basePriceWithoutTax = basePriceWithoutTax + +combination.price;
 	basePriceWithTax = basePriceWithTax + +combination.price * (taxRate/100 + 1);
-	
+
 
 	var priceWithDiscountsWithoutTax = basePriceWithoutTax;
 	var priceWithDiscountsWithTax = basePriceWithTax;
@@ -1173,4 +1173,9 @@ function checkUrl()
 		}
 	}
 	return false;
+}
+
+if(typeof userID !== 'undefined' && typeof productID !== 'undefined') {
+	console.log('tu będzie post');
+
 }
