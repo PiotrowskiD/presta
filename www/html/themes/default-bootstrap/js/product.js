@@ -117,6 +117,9 @@ if (typeof combinations !== 'undefined' && combinations)
 $(document).ready(function()
 {
 	console.log('document ready')
+	console.log(userID + ', ' + productID);
+	console.log('--------document ready ')
+
 	var url_found = checkUrl();
 	//init the price in relation of the selected attributes
 	if (!url_found)
