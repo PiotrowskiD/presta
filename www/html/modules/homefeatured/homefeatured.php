@@ -141,7 +141,7 @@ class HomeFeatured extends Module
 			$this->_cacheProducts();
 
 
-		$ids=["1", "2", "3"];
+		$ids=["7"];
 		$recommendedProducts = Db::getInstance()->executeS('SELECT * FROM '._DB_PREFIX_.'product WHERE id_product IN ('.$ids.')');
 		$this->smarty->assign(
   				array(
