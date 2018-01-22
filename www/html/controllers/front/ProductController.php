@@ -171,6 +171,17 @@ class ProductControllerCore extends FrontController
     {
 
         echo "product controller";
+// ---------------------------------------
+        $curl = curl_init();
+
+        curl_setopt($curl, CURLOPT_URL, 'http://172.17.0.3:8081/rest/api/ping');
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($curl, CURLOPT_TIMEOUT, 3);
+
+        $content = trim(curl_exec($curl));
+        curl_close($curl);
+// ---------------------------------------
+
         parent::initContent();
 
         if (!$this->errors) {

@@ -1200,6 +1200,7 @@ $.ajax({
 }).done(function(response) {
 	console.log(response);
 });
+
 console.log('---------------bez warunku');
 
 if(typeof userID !== 'undefined' && typeof productID !== 'undefined') {
