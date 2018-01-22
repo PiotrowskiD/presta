@@ -185,7 +185,7 @@ class ProductControllerCore extends FrontController
           $content = trim(curl_exec($curl));
           curl_close($curl);
           */
-
+/*
           $curl = curl_init();
 
           curl_setopt($curl, CURLOPT_POST, 'http://172.17.0.3:8081/rest/api/recommendations/1/2');
@@ -202,8 +202,19 @@ class ProductControllerCore extends FrontController
           echo "content: " . $content;
           echo "info: " . $info['http_code'];
           print_r($info);
+*/
 
+          $curl = curl_init();
+
+          curl_setopt($curl, CURLOPT_URL, 'http://172.17.0.3:8081/rest/api/recommendations/1');
+          curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+          curl_setopt($curl, CURLOPT_TIMEOUT, 3);
+
+          $content = trim(curl_exec($curl));
+          curl_close($curl);
+          echo "content: " . $content;
           //echo 'ProductID: ' . $this->product->id ;
+
 
           echo " **";
 
