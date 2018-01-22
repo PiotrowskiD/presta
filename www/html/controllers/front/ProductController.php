@@ -169,6 +169,8 @@ class ProductControllerCore extends FrontController
      */
     public function initContent()
     {
+
+        echo "product controller";
         parent::initContent();
 
         if (!$this->errors) {
