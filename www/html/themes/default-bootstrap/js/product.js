@@ -117,8 +117,15 @@ if (typeof combinations !== 'undefined' && combinations)
 $(document).ready(function()
 {
 	console.log('document ready')
-	console.log(userID + ', ' + productID);
+	$.ajax({
+		type: "GET",
+		url: "http://172.17.0.3:8081/rest/api/ping"
+	}).done(function(response) {
+		console.log(response);
+	});
+	//console.log(userID + ', ' + productID);
 	console.log('--------document ready ')
+
 
 	var url_found = checkUrl();
 	//init the price in relation of the selected attributes
