@@ -206,7 +206,7 @@ class ProductControllerCore extends FrontController
 
           $curl = curl_init();
 
-          curl_setopt($curl, CURLOPT_URL, 'http://172.17.0.3:8081/rest/api/recommendations/1');
+          curl_setopt($curl, CURLOPT_URL, 'http://172.17.0.3:8081/rest/api/recommendations/2');
           curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
           curl_setopt($curl, CURLOPT_TIMEOUT, 3);
 
