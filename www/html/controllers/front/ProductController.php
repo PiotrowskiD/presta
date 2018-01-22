@@ -185,7 +185,7 @@ class ProductControllerCore extends FrontController
           $content = trim(curl_exec($curl));
           curl_close($curl);
           */
-/*
+
           $curl = curl_init();
 
           curl_setopt($curl, CURLOPT_POST, 1);
@@ -194,17 +194,17 @@ class ProductControllerCore extends FrontController
           curl_setopt($curl, CURLOPT_POST, 'http://172.17.0.3:8081/rest/api/recommendations');
           curl_setopt($curl, CURLOPT_POST, 1);
           curl_setopt($ch, CURLOPT_POSTFIELDS,
-              "user_id=value1&product_id=value2");
+              "user_id=1&product_id=1");
 
           curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
           curl_setopt($curl, CURLOPT_TIMEOUT, 3);
 
           $content = trim(curl_exec($curl));
-          curl_close($curl);*/
+          curl_close($curl);
   // ---------------------------------------
-          //echo "content: " . $content;
+          echo "content: " . $content;
 
-          echo 'ProductID: ' . $this->product->id ;
+          //echo 'ProductID: ' . $this->product->id ;
 
           echo "product end";
 
