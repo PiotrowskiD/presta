@@ -201,7 +201,7 @@ class ProductControllerCore extends FrontController
 
           echo "content: " . $content;
           echo "info: " . $info['http_code'];
-          print_r($info)
+          print_r($info);
 
           //echo 'ProductID: ' . $this->product->id ;
 
