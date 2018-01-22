@@ -169,24 +169,46 @@ class ProductControllerCore extends FrontController
      */
     public function initContent()
     {
-
-        echo "product controller";
-// ---------------------------------------
-        $curl = curl_init();
-
-        curl_setopt($curl, CURLOPT_URL, 'http://172.17.0.3:8081/rest/api/ping');
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($curl, CURLOPT_TIMEOUT, 3);
-
-        $content = trim(curl_exec($curl));
-        curl_close($curl);
-// ---------------------------------------
-        echo "content: " . $content;
-        echo "product end";
-
         parent::initContent();
 
         if (!$this->errors) {
+
+          echo "product controller";
+  // ---------------------------------------
+  /*
+          $curl = curl_init();
+
+          curl_setopt($curl, CURLOPT_URL, 'http://172.17.0.3:8081/rest/api/ping');
+          curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+          curl_setopt($curl, CURLOPT_TIMEOUT, 3);
+
+          $content = trim(curl_exec($curl));
+          curl_close($curl);
+          */
+/*
+          $curl = curl_init();
+
+          curl_setopt($curl, CURLOPT_POST, 1);
+          curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+
+          curl_setopt($curl, CURLOPT_POST, 'http://172.17.0.3:8081/rest/api/recommendations');
+          curl_setopt($curl, CURLOPT_POST, 1);
+          curl_setopt($ch, CURLOPT_POSTFIELDS,
+              "user_id=value1&product_id=value2");
+
+          curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+          curl_setopt($curl, CURLOPT_TIMEOUT, 3);
+
+          $content = trim(curl_exec($curl));
+          curl_close($curl);*/
+  // ---------------------------------------
+          //echo "content: " . $content;
+
+          echo 'ProductID: ' . $this->product->id ;
+
+          echo "product end";
+
+
             if (Pack::isPack((int)$this->product->id) && !Pack::isInStock((int)$this->product->id)) {
                 $this->product->quantity = 0;
             }
