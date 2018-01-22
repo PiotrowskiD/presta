@@ -188,17 +188,19 @@ class ProductControllerCore extends FrontController
 
           $curl = curl_init();
 
-          curl_setopt($curl, CURLOPT_POST, 'http://172.17.0.3:8081/rest/api/recommendations');
+          curl_setopt($curl, CURLOPT_POST, 'http://172.17.0.3:8081/rest/api/recommendations/1/2');
           curl_setopt($curl, CURLOPT_POST, 1);
-          curl_setopt($curl, CURLOPT_POSTFIELDS, "user_id=1&product_id=1");
 
           curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
           curl_setopt($curl, CURLOPT_TIMEOUT, 3);
 
           $content = trim(curl_exec($curl));
+          $info = curl_getinfo($curl);
+
           curl_close($curl);
 
           echo "content: " . $content;
+          echo "info: " . $info['http_code'];
 
           //echo 'ProductID: ' . $this->product->id ;
 
