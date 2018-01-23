@@ -168,7 +168,7 @@ class HomeFeatured extends Module
 
 			echo 'content: ' . $content;
 
-			if(count($content) > 0){
+			//if(count($content) > 0){
 				/*foreach ($recommendationsArray as $key => $value) {
 				  $ids .= $value['itemID'].",";
 				}*/
@@ -194,7 +194,7 @@ class HomeFeatured extends Module
 							)
 				 );
 
-			}
+			//}
 
 			//$this->_cacheProducts();
 
