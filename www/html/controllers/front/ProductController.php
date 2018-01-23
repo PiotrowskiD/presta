@@ -220,7 +220,7 @@ class ProductControllerCore extends FrontController
 
           $curl = curl_init();
 
-          curl_setopt($curl, CURLOPT_URL, 'http://172.17.0.3:8081/rest/api/recommendations' . $id_customer . '/' . $id_product2);
+          curl_setopt($curl, CURLOPT_URL, 'http://172.17.0.3:8081/rest/api/recommendations/' . $id_customer . '/' . $id_product2);
           curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
           curl_setopt($curl, CURLOPT_TIMEOUT, 3);
 
@@ -229,7 +229,6 @@ class ProductControllerCore extends FrontController
           echo "content: " . $content;
           echo ' ProductID: ' . $this->product->id ;
 
-echo ' cust: ' . Context::getContext()->customer->id;
           echo " **";
 
 
