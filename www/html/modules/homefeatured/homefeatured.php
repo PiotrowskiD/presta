@@ -145,10 +145,6 @@ class HomeFeatured extends Module
 
 	public function hookDisplayHome($params)
 	{
-		echo 'wrzucam produkty bez warunku'; 
-		if (!$this->isCached('homefeatured.tpl', $this->getCacheId()))
-		{
-
 			echo 'wrzucam produkty';
 /*
 			$ids=["7"];
@@ -169,7 +165,6 @@ class HomeFeatured extends Module
 					'homeSize' => Image::getSize(ImageType::getFormatedName('home')),
 				)
 			);
-		}
 
 		return $this->display(__FILE__, 'homefeatured.tpl', $this->getCacheId());
 	}
