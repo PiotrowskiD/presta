@@ -204,9 +204,23 @@ class ProductControllerCore extends FrontController
           print_r($info);
 */
 
+          if (Context::getContext()->customer->id)
+          {
+            $id_customer = Context::getContext()->customer->id;
+            echo ' cust: ' . $id_customer;
+          }
+          else
+          {
+            $id_customer = "0";
+          }
+
+
+
+          $id_product2 = $this->product->id;
+
           $curl = curl_init();
 
-          curl_setopt($curl, CURLOPT_URL, 'http://172.17.0.3:8081/rest/api/recommendations/2');
+          curl_setopt($curl, CURLOPT_URL, 'http://172.17.0.3:8081/rest/api/recommendations' . $id_customer . '/' . $id_product2);
           curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
           curl_setopt($curl, CURLOPT_TIMEOUT, 3);
 
@@ -215,7 +229,7 @@ class ProductControllerCore extends FrontController
           echo "content: " . $content;
           echo ' ProductID: ' . $this->product->id ;
 
-
+echo ' cust: ' . Context::getContext()->customer->id;
           echo " **";
 
 
