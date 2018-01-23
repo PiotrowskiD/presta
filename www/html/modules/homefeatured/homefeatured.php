@@ -175,14 +175,15 @@ class HomeFeatured extends Module
 				  $ids .= $value['itemID'].",";
 				}*/
 				echo ' ok ';
+				$id = 6
 				echo 'SELECT * FROM '._DB_PREFIX_.'product WHERE id_product IN ('. $tabJson[0] .')';
-				$recommendedProducts = Db::getInstance()->executeS('SELECT * FROM '._DB_PREFIX_.'product WHERE id_product IN ('. $tabJson[0] .')');
+				$recommendedProducts = Db::getInstance()->executeS('SELECT * FROM '._DB_PREFIX_.'product WHERE id_product IN ('. 6 .')');
 
-						$recommendedProducts2[0] = (array)(new Product($tabJson[0], false, '1'));
+						$recommendedProducts2[0] = (array)(new Product(6, false, '1'));
 						$recommendedProducts2[0]['price_without_reduction'] = '';
-						$recommendedProducts2[0]['id_image'] = Product::getCover($tabJson[0])['id_image'];
+						$recommendedProducts2[0]['id_image'] = Product::getCover(6)['id_image'];
 
-						$recommendedProducts2[0]['link'] = Context::getContext()->link->getProductLink($tabJson[0],
+						$recommendedProducts2[0]['link'] = Context::getContext()->link->getProductLink(6,
 						$recommendedProducts2[0]['link_rewrite'], $recommendedProducts2[0]['category'],
 						$recommendedProducts2[0]['ean13']);
 
