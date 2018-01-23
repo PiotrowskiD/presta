@@ -145,6 +145,7 @@ class HomeFeatured extends Module
 
 	public function hookDisplayHome($params)
 	{
+		echo 'wrzucam produkty bez warunku'; 
 		if (!$this->isCached('homefeatured.tpl', $this->getCacheId()))
 		{
 
