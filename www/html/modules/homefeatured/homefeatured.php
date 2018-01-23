@@ -181,13 +181,13 @@ class HomeFeatured extends Module
 
 
 
-    
+
 	for($i = 0; $i < count($ids2); $i++){
 		$id = intval($tabJson[$i]);
 		$recommendedProducts2[$i] = (array)(new Product($id, false, '1'));
 		$recommendedProducts2[$i]['price_without_reduction'] = '';
-		$recommendedProducts2[$i]['id_image'] = Product::getCover((int)$ids2[$i])['id_image'];
-		$recommendedProducts2[$i]['link'] = Context::getContext()->link->getProductLink((int)$ids2[$i], $recommendedProducts2[$i]['link_rewrite'], $recommendedProducts2[$i]['category'], $recommendedProducts2[$i]['ean13']);
+		$recommendedProducts2[$i]['id_image'] = Product::getCover((int)$id)['id_image'];
+		$recommendedProducts2[$i]['link'] = Context::getContext()->link->getProductLink((int)$id, $recommendedProducts2[$i]['link_rewrite'], $recommendedProducts2[$i]['category'], $recommendedProducts2[$i]['ean13']);
 }
 
 				// echo 'SELECT * FROM '._DB_PREFIX_.'product WHERE id_product IN ('. $id .')';
