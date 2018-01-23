@@ -180,9 +180,9 @@ class HomeFeatured extends Module
 
 						$recommendedProducts2[0] = (array)(new Product($tabJson[0], false, '1'));
 						$recommendedProducts2[0]['price_without_reduction'] = '';
-						$recommendedProducts2[0]['id_image'] = Product::getCover((int)$tabJson[0])['id_image'];
+						$recommendedProducts2[0]['id_image'] = Product::getCover($tabJson[0])['id_image'];
 
-						$recommendedProducts2[0]['link'] = Context::getContext()->link->getProductLink((int)$tabJson[0],
+						$recommendedProducts2[0]['link'] = Context::getContext()->link->getProductLink($tabJson[0],
 						$recommendedProducts2[0]['link_rewrite'], $recommendedProducts2[0]['category'],
 						$recommendedProducts2[0]['ean13']);
 
