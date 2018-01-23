@@ -166,14 +166,15 @@ class HomeFeatured extends Module
 			$content = trim(curl_exec($curl));
 			curl_close($curl);
 
-			echo 'content: ' . $content;
+			$tabJson = json_decode($content, true);
 
-			echo (int) $content[0];
+			echo (int)$tabJson[0];
 
 			if(count($content) == 0){
 				/*foreach ($recommendationsArray as $key => $value) {
 				  $ids .= $value['itemID'].",";
 				}*/
+
 
 				$recommendedProducts = Db::getInstance()->executeS('SELECT * FROM '._DB_PREFIX_.'product WHERE id_product IN ('.(int)$content[0].')');
 
