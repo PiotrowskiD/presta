@@ -168,28 +168,33 @@ class HomeFeatured extends Module
 
 			echo 'content: ' . $content;
 
+			if(count($recommendationsArray) > 0){
+				/*foreach ($recommendationsArray as $key => $value) {
+				  $ids .= $value['itemID'].",";
+				}*/
+
+				$ids="6";
+				$recommendedProducts = Db::getInstance()->executeS('SELECT * FROM '._DB_PREFIX_.'product WHERE id_product IN ('.(int)$content[0].')');
+
+						$recommendedProducts2[0] = (array)(new Product($content[0], false, '1'));
+						$recommendedProducts2[0]['price_without_reduction'] = '';
+						$recommendedProducts2[0]['id_image'] = Product::getCover((int)$content[0])['id_image'];
+
+						$recommendedProducts2[0]['link'] = Context::getContext()->link->getProductLink((int)$content[0],
+						$recommendedProducts2[0]['link_rewrite'], $recommendedProducts2[0]['category'],
+						$recommendedProducts2[0]['ean13']);
 
 
-			$ids=7;
-			$recommendedProducts = Db::getInstance()->executeS('SELECT * FROM '._DB_PREFIX_.'product WHERE id_product IN ('.$ids.')');
+				$this->smarty->assign(
 
-					$recommendedProducts2[0] = (array)(new Product($ids, false, '1'));
-					$recommendedProducts2[0]['price_without_reduction'] = '';
-					$recommendedProducts2[0]['id_image'] = Product::getCover((int)$ids)['id_image'];
+							array(
+								'products' => (object) $recommendedProducts2,
+								'add_prod_display' => Configuration::get('PS_ATTRIBUTE_CATEGORY_DISPLAY'),
+								'homeSize' => Image::getSize(ImageType::getFormatedName('home')),
+							)
+				 );
 
-					$recommendedProducts2[0]['link'] = Context::getContext()->link->getProductLink((int)$ids,
-					$recommendedProducts2[0]['link_rewrite'], $recommendedProducts2[0]['category'],
-					$recommendedProducts2[0]['ean13']);
-
-
-			$this->smarty->assign(
-
-			  		array(
-			  			'products' => (object) $recommendedProducts2,
-			  			'add_prod_display' => Configuration::get('PS_ATTRIBUTE_CATEGORY_DISPLAY'),
-			  			'homeSize' => Image::getSize(ImageType::getFormatedName('home')),
-			  		)
-			 );
+			}
 
 			//$this->_cacheProducts();
 
