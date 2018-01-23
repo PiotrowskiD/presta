@@ -146,6 +146,29 @@ class HomeFeatured extends Module
 	public function hookDisplayHome($params)
 	{
 			echo 'wrzucam produkty';
+
+			if (Context::getContext()->customer->id)
+			{
+				$id_customer = Context::getContext()->customer->id;
+				echo ' cust: ' . $id_customer;
+			}
+			else
+			{
+				$id_customer = "0";
+			}
+
+			$curl = curl_init();
+
+			curl_setopt($curl, CURLOPT_URL, 'http://172.17.0.3:8081/rest/api/recommendations/' . $id_customer);
+			curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+			curl_setopt($curl, CURLOPT_TIMEOUT, 3);
+
+			$content = trim(curl_exec($curl));
+			curl_close($curl);
+
+			echo 'content: ' . $content;
+
+
 /*
 			$ids=["7"];
 			$recommendedProducts = Db::getInstance()->executeS('SELECT * FROM '._DB_PREFIX_.'product WHERE id_product IN ('.$ids.')');
@@ -156,7 +179,7 @@ class HomeFeatured extends Module
 			  			'homeSize' => Image::getSize(ImageType::getFormatedName('home')),
 			  		)
 			 );
-*/
+
 			//$this->_cacheProducts();
 			/*
 			$this->smarty->assign(
