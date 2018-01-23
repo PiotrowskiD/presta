@@ -138,21 +138,7 @@ class HomeFeatured extends Module
 	public function hookDisplayHomeTab($params)
 	{
 		if (!$this->isCached('tab.tpl', $this->getCacheId('homefeatured-tab')))
-			$this->_cacheProducts();
-
-
-		echo 'wrzucam produkty';
-
-		$ids=["7"];
-		$recommendedProducts = Db::getInstance()->executeS('SELECT * FROM '._DB_PREFIX_.'product WHERE id_product IN ('.$ids.')');
-		$this->smarty->assign(
-  				array(
-  					'products' => $recommendedProducts,
-  					'add_prod_display' => Configuration::get('PS_ATTRIBUTE_CATEGORY_DISPLAY'),
-  					'homeSize' => Image::getSize(ImageType::getFormatedName('home')),
-  				)
-  			);
-
+			 $this->_cacheProducts();
 
 		return $this->display(__FILE__, 'tab.tpl', $this->getCacheId('homefeatured-tab'));
 	}
@@ -161,7 +147,20 @@ class HomeFeatured extends Module
 	{
 		if (!$this->isCached('homefeatured.tpl', $this->getCacheId()))
 		{
-			$this->_cacheProducts();
+
+			echo 'wrzucam produkty';
+/*
+			$ids=["7"];
+			$recommendedProducts = Db::getInstance()->executeS('SELECT * FROM '._DB_PREFIX_.'product WHERE id_product IN ('.$ids.')');
+			$this->smarty->assign(
+			  		array(
+			  			'products' => $recommendedProducts,
+			  			'add_prod_display' => Configuration::get('PS_ATTRIBUTE_CATEGORY_DISPLAY'),
+			  			'homeSize' => Image::getSize(ImageType::getFormatedName('home')),
+			  		)
+			 );
+*/
+			//$this->_cacheProducts();
 			$this->smarty->assign(
 				array(
 					'products' => HomeFeatured::$cache_products,
