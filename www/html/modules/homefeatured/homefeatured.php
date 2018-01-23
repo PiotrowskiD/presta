@@ -170,23 +170,21 @@ class HomeFeatured extends Module
 
 			echo (int)$tabJson[0];
 			$id = intval($tabJson[0]);
-			$ids = "";
+
 			if(count($tabJson) > 0){
 				/*foreach ($recommendationsArray as $key => $value) {
 				  $ids .= $value['itemID'].",";
 				}*/
 				echo ' ok ';
 
-				foreach ($recommendationsArray as $key => $value) {
-  $ids .= $value['itemID'].",";
-}
 
-$ids = substr($ids, 0, -1);
-$ids2 = explode(',' , $ids);
-$recommendedProducts2 = array();
-    $recommendedProducts = Db::getInstance()->executeS('SELECT * FROM '._DB_PREFIX_.'product WHERE id_product IN ('.$ids.')');
+
+
+
+    
 	for($i = 0; $i < count($ids2); $i++){
-		$recommendedProducts2[$i] = (array)(new Product($ids2[$i], false, '1'));
+		$id = intval($tabJson[$i]);
+		$recommendedProducts2[$i] = (array)(new Product($id, false, '1'));
 		$recommendedProducts2[$i]['price_without_reduction'] = '';
 		$recommendedProducts2[$i]['id_image'] = Product::getCover((int)$ids2[$i])['id_image'];
 		$recommendedProducts2[$i]['link'] = Context::getContext()->link->getProductLink((int)$ids2[$i], $recommendedProducts2[$i]['link_rewrite'], $recommendedProducts2[$i]['category'], $recommendedProducts2[$i]['ean13']);
