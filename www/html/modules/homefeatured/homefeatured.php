@@ -168,12 +168,13 @@ class HomeFeatured extends Module
 
 			echo 'content: ' . $content;
 
-			if(count($content) > 0){
+			echo (int) $content[0];
+
+			if(count($content) == 0){
 				/*foreach ($recommendationsArray as $key => $value) {
 				  $ids .= $value['itemID'].",";
 				}*/
 
-				$ids="6";
 				$recommendedProducts = Db::getInstance()->executeS('SELECT * FROM '._DB_PREFIX_.'product WHERE id_product IN ('.(int)$content[0].')');
 
 						$recommendedProducts2[0] = (array)(new Product($content[0], false, '1'));
