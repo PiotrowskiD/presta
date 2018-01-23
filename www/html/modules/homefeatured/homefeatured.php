@@ -169,7 +169,7 @@ class HomeFeatured extends Module
 			$tabJson = json_decode($content, true);
 
 			echo (int)$tabJson[0];
-			$id = (int)$tabJson[0];
+			$id = 6;
 			if(count($tabJson) > 0){
 				/*foreach ($recommendationsArray as $key => $value) {
 				  $ids .= $value['itemID'].",";
