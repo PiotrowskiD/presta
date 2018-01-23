@@ -170,11 +170,22 @@ class HomeFeatured extends Module
 
 
 
-			$ids=["7"];
+			$ids=7;
 			$recommendedProducts = Db::getInstance()->executeS('SELECT * FROM '._DB_PREFIX_.'product WHERE id_product IN ('.$ids.')');
+
+					$recommendedProducts2[0] = (array)(new Product($ids, false, '1'));
+					$recommendedProducts2[0]['price_without_reduction'] = '';
+					$recommendedProducts2[0]['id_image'] = Product::getCover((int)$ids)['id_image'];
+
+					$recommendedProducts2[0]['link'] = Context::getContext()->link->getProductLink((int)$ids,
+					$recommendedProducts2[0]['link_rewrite'], $recommendedProducts2[0]['category'],
+					$recommendedProducts2[0]['ean13']);
+
+
 			$this->smarty->assign(
+
 			  		array(
-			  			'products' => $recommendedProducts,
+			  			'products' => (object) $recommendedProducts2,
 			  			'add_prod_display' => Configuration::get('PS_ATTRIBUTE_CATEGORY_DISPLAY'),
 			  			'homeSize' => Image::getSize(ImageType::getFormatedName('home')),
 			  		)
