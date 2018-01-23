@@ -174,7 +174,7 @@ class HomeFeatured extends Module
 				/*foreach ($recommendationsArray as $key => $value) {
 				  $ids .= $value['itemID'].",";
 				}*/
-				echo ' ok '
+				echo ' ok ';
 
 				$recommendedProducts = Db::getInstance()->executeS('SELECT * FROM '._DB_PREFIX_.'product WHERE id_product IN ('. $tabJson[0] .')');
 
