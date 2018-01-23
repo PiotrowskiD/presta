@@ -168,7 +168,7 @@ class HomeFeatured extends Module
 
 			echo 'content: ' . $content;
 
-			if(count($recommendationsArray) > 0){
+			if(count($content) > 0){
 				/*foreach ($recommendationsArray as $key => $value) {
 				  $ids .= $value['itemID'].",";
 				}*/
