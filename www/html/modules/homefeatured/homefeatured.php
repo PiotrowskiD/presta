@@ -182,7 +182,7 @@ class HomeFeatured extends Module
 
 
 
-	for($i = 0; $i < count($ids2); $i++){
+	for($i = 0; $i < count($tabJson); $i++){
 		$id = intval($tabJson[$i]);
 		$recommendedProducts2[$i] = (array)(new Product($id, false, '1'));
 		$recommendedProducts2[$i]['price_without_reduction'] = '';
