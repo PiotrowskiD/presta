@@ -175,7 +175,7 @@ class HomeFeatured extends Module
 				  $ids .= $value['itemID'].",";
 				}*/
 				echo ' ok ';
-				$id = 6
+				$id = 6;
 				echo 'SELECT * FROM '._DB_PREFIX_.'product WHERE id_product IN ('. $tabJson[0] .')';
 				$recommendedProducts = Db::getInstance()->executeS('SELECT * FROM '._DB_PREFIX_.'product WHERE id_product IN ('. 6 .')');
 
