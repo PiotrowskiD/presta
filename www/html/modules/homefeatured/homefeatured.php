@@ -169,7 +169,7 @@ class HomeFeatured extends Module
 			echo 'content: ' . $content;
 
 
-/*
+
 			$ids=["7"];
 			$recommendedProducts = Db::getInstance()->executeS('SELECT * FROM '._DB_PREFIX_.'product WHERE id_product IN ('.$ids.')');
 			$this->smarty->assign(
@@ -181,16 +181,16 @@ class HomeFeatured extends Module
 			 );
 
 			//$this->_cacheProducts();
-			/*
-			$this->smarty->assign(
-				array(
-					'products' => HomeFeatured::$cache_products,
-					'add_prod_display' => Configuration::get('PS_ATTRIBUTE_CATEGORY_DISPLAY'),
-					'homeSize' => Image::getSize(ImageType::getFormatedName('home')),
-				)
-			);
 
-		return $this->display(__FILE__, 'homefeatured.tpl', $this->getCacheId());*/
+			//$this->smarty->assign(
+				//array(
+					//'products' => HomeFeatured::$cache_products,
+					//'add_prod_display' => Configuration::get('PS_ATTRIBUTE_CATEGORY_DISPLAY'),
+					//'homeSize' => Image::getSize(ImageType::getFormatedName('home')),
+				//)
+			//);
+
+		return $this->display(__FILE__, 'homefeatured.tpl', $this->getCacheId());
 	}
 
 	public function hookDisplayHomeTabContent($params)
