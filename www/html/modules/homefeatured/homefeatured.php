@@ -141,7 +141,7 @@ class HomeFeatured extends Module
 			$this->_cacheProducts();
 
 
-			echo 'wrzucam produkty'
+		echo 'wrzucam produkty';
 
 		$ids=["7"];
 		$recommendedProducts = Db::getInstance()->executeS('SELECT * FROM '._DB_PREFIX_.'product WHERE id_product IN ('.$ids.')');
