@@ -158,6 +158,7 @@ class HomeFeatured extends Module
 			 );
 */
 			//$this->_cacheProducts();
+			/*
 			$this->smarty->assign(
 				array(
 					'products' => HomeFeatured::$cache_products,
@@ -166,7 +167,7 @@ class HomeFeatured extends Module
 				)
 			);
 
-		return $this->display(__FILE__, 'homefeatured.tpl', $this->getCacheId());
+		return $this->display(__FILE__, 'homefeatured.tpl', $this->getCacheId());*/
 	}
 
 	public function hookDisplayHomeTabContent($params)
