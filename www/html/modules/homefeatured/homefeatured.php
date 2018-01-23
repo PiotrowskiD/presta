@@ -169,21 +169,21 @@ class HomeFeatured extends Module
 			$tabJson = json_decode($content, true);
 
 			echo (int)$tabJson[0];
-
+			$id = (int)$tabJson[0];
 			if(count($tabJson) > 0){
 				/*foreach ($recommendationsArray as $key => $value) {
 				  $ids .= $value['itemID'].",";
 				}*/
 				echo ' ok ';
-				$id = 6;
-				echo 'SELECT * FROM '._DB_PREFIX_.'product WHERE id_product IN ('. $tabJson[0] .')';
-				$recommendedProducts = Db::getInstance()->executeS('SELECT * FROM '._DB_PREFIX_.'product WHERE id_product IN ('. 6 .')');
 
-						$recommendedProducts2[0] = (array)(new Product(6, false, '1'));
+				echo 'SELECT * FROM '._DB_PREFIX_.'product WHERE id_product IN ('. $id .')';
+				$recommendedProducts = Db::getInstance()->executeS('SELECT * FROM '._DB_PREFIX_.'product WHERE id_product IN ('. $id .')');
+
+						$recommendedProducts2[0] = (array)(new Product($id, false, '1'));
 						$recommendedProducts2[0]['price_without_reduction'] = '';
-						$recommendedProducts2[0]['id_image'] = Product::getCover(6)['id_image'];
+						$recommendedProducts2[0]['id_image'] = Product::getCover($id)['id_image'];
 
-						$recommendedProducts2[0]['link'] = Context::getContext()->link->getProductLink(6,
+						$recommendedProducts2[0]['link'] = Context::getContext()->link->getProductLink($id,
 						$recommendedProducts2[0]['link_rewrite'], $recommendedProducts2[0]['category'],
 						$recommendedProducts2[0]['ean13']);
 
