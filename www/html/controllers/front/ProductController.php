@@ -173,48 +173,12 @@ class ProductControllerCore extends FrontController
 
         if (!$this->errors) {
 
-          echo "* ";
-
-  /*
-          $curl = curl_init();
-
-          curl_setopt($curl, CURLOPT_URL, 'http://172.17.0.3:8081/rest/api/ping');
-          curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-          curl_setopt($curl, CURLOPT_TIMEOUT, 3);
-
-          $content = trim(curl_exec($curl));
-          curl_close($curl);
-          */
-/*
-          $curl = curl_init();
-
-          curl_setopt($curl, CURLOPT_POST, 'http://172.17.0.3:8081/rest/api/recommendations/1/2');
-          curl_setopt($curl, CURLOPT_POST, 1);
-
-          curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-          //curl_setopt($curl, CURLOPT_TIMEOUT, 3);
-
-          $content = trim(curl_exec($curl));
-          $info = curl_getinfo($curl);
-
-          curl_close($curl);
-
-          echo "content: " . $content;
-          echo "info: " . $info['http_code'];
-          print_r($info);
-*/
-
-          if (Context::getContext()->customer->id)
-          {
+          if (Context::getContext()->customer->id) {
             $id_customer = Context::getContext()->customer->id;
-            echo ' cust: ' . $id_customer;
           }
-          else
-          {
+          else {
             $id_customer = "0";
           }
-
-
 
           $id_product2 = $this->product->id;
 
@@ -226,10 +190,6 @@ class ProductControllerCore extends FrontController
 
           $content = trim(curl_exec($curl));
           curl_close($curl);
-          echo "content: " . $content;
-          echo ' ProductID: ' . $this->product->id ;
-
-          echo " **";
 
 
             if (Pack::isPack((int)$this->product->id) && !Pack::isInStock((int)$this->product->id)) {

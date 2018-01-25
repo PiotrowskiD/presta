@@ -147,13 +147,10 @@ class HomeFeatured extends Module
 	{
 			echo 'wrzucam produkty';
 
-			if (Context::getContext()->customer->id)
-			{
+			if (Context::getContext()->customer->id) {
 				$id_customer = Context::getContext()->customer->id;
-				echo ' cust: ' . $id_customer;
 			}
-			else
-			{
+			else {
 				$id_customer = "0";
 			}
 
@@ -168,60 +165,26 @@ class HomeFeatured extends Module
 
 			$tabJson = json_decode($content, true);
 
-			echo (int)$tabJson[0];
 			$id = intval($tabJson[0]);
 
-			if(count($tabJson) > 0){
-				/*foreach ($recommendationsArray as $key => $value) {
-				  $ids .= $value['itemID'].",";
-				}*/
-				echo ' ok ';
+			if(count($tabJson) > 0) {
 
+				for($i = 0; $i < count($tabJson); $i++) {
+					$id = intval($tabJson[$i]);
+					$recommendedProducts2[$i] = (array)(new Product($id, false, '1'));
+					$recommendedProducts2[$i]['price_without_reduction'] = '';
+					$recommendedProducts2[$i]['id_image'] = Product::getCover((int)$id)['id_image'];
+					$recommendedProducts2[$i]['link'] = Context::getContext()->link->getProductLink((int)$id, $recommendedProducts2[$i]['link_rewrite'], $recommendedProducts2[$i]['category'], $recommendedProducts2[$i]['ean13']);
+				}
+					$this->smarty->assign(
 
-
-
-
-
-	for($i = 0; $i < count($tabJson); $i++){
-		$id = intval($tabJson[$i]);
-		$recommendedProducts2[$i] = (array)(new Product($id, false, '1'));
-		$recommendedProducts2[$i]['price_without_reduction'] = '';
-		$recommendedProducts2[$i]['id_image'] = Product::getCover((int)$id)['id_image'];
-		$recommendedProducts2[$i]['link'] = Context::getContext()->link->getProductLink((int)$id, $recommendedProducts2[$i]['link_rewrite'], $recommendedProducts2[$i]['category'], $recommendedProducts2[$i]['ean13']);
-}
-
-				// echo 'SELECT * FROM '._DB_PREFIX_.'product WHERE id_product IN ('. $id .')';
-				// $recommendedProducts = Db::getInstance()->executeS('SELECT * FROM '._DB_PREFIX_.'product WHERE id_product IN ('. $id .')');
-        //
-				// 		$recommendedProducts2[0] = (array)(new Product($id, false, '1'));
-				// 		$recommendedProducts2[0]['price_without_reduction'] = '';
-				// 		$recommendedProducts2[0]['id_image'] = Product::getCover($id)['id_image'];
-        //
-				// 		$recommendedProducts2[0]['link'] = Context::getContext()->link->getProductLink($id,
-				// 		$recommendedProducts2[0]['link_rewrite'], $recommendedProducts2[0]['category'],
-				// 		$recommendedProducts2[0]['ean13']);
-
-
-				$this->smarty->assign(
-
-							array(
-								'products' => (object) $recommendedProducts2,
-								'add_prod_display' => Configuration::get('PS_ATTRIBUTE_CATEGORY_DISPLAY'),
-								'homeSize' => Image::getSize(ImageType::getFormatedName('home')),
-							)
-				 );
-
+								array(
+									'products' => (object) $recommendedProducts2,
+									'add_prod_display' => Configuration::get('PS_ATTRIBUTE_CATEGORY_DISPLAY'),
+									'homeSize' => Image::getSize(ImageType::getFormatedName('home')),
+								)
+					 );
 			}
-
-			//$this->_cacheProducts();
-
-			//$this->smarty->assign(
-				//array(
-					//'products' => HomeFeatured::$cache_products,
-					//'add_prod_display' => Configuration::get('PS_ATTRIBUTE_CATEGORY_DISPLAY'),
-					//'homeSize' => Image::getSize(ImageType::getFormatedName('home')),
-				//)
-			//);
 
 		return $this->display(__FILE__, 'homefeatured.tpl', $this->getCacheId());
 	}
