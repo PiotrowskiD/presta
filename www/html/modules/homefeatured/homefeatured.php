@@ -145,8 +145,6 @@ class HomeFeatured extends Module
 
 	public function hookDisplayHome($params)
 	{
-			echo 'wrzucam produkty';
-
 			if (Context::getContext()->customer->id) {
 				$id_customer = Context::getContext()->customer->id;
 			}
